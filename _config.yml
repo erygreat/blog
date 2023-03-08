@@ -1,20 +1,6 @@
 # Configurations
-title:            Jekyll Gitbook
-longtitle:        Jekyll Gitbook
-author:           HE Tao
-email:            sighingnow@gmail.com
-description: >
-  Build Jekyll site with the GitBook style.
-
-version:          1.0
-gitbook_version:  3.2.3
-
-url:              'https://sighingnow.github.io'
+url:              'https://erygreat.github.io'
 baseurl:          '/blog'
-rss:              RSS
-
-# bootstrap: use the remote theme for the site itself
-remote_theme: sighingnow/jekyll-gitbook
 
 toc:
   enabled: true
@@ -43,16 +29,12 @@ markdown_ext:     markdown,mkdown,mkdn,mkd,md
 # Permalinks
 permalink:        /:categories/:year-:month-:day-:title:output_ext
 
-exclude:
-  - _drafts
-
 collections:
   pages:
     output: true
     permalink: /:collection/:path/
 
-page_width: 800px
-
+# 构建产物路径
 destination:      ./_site
 incremental:      false
 regenerate:       true
@@ -60,4 +42,3 @@ regenerate:       true
 plugins:
   - jekyll-feed
   - jekyll-readme-index
-  - jemoji

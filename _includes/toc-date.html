@@ -1,11 +1,8 @@
 <div class="book-summary">
     <nav role="navigation">
-        <div id="book-search-input" role="search">
-            <input type="text" placeholder="Type to search" />
-        </div>
-        <div id="book-search-input-link" role="search">
-            <a href="{{site.baseurl}}/assets/search.html">Click to Search</a>
-        </div>
+
+        {% include search-input.html %}
+
         <ul class="summary">
             {% if page.url == "/index.html" or page.url == "/" %}
             <li class="chapter active" data-level="1.1" data-path="{{site.baseurl}}">
@@ -20,7 +17,7 @@
             <li class="divider"></li>
 
             {% for collection in site.collections %}
-                <!-- <p>{{ collection.label }}</p> -->
+                <p>{{ collection.label }}</p>
                 {% if collection.output %}
                     {% if collection.label == "posts" %}
                         {% assign reversed_posts = site[collection.label] | reverse %}
